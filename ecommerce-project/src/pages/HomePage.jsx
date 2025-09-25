@@ -3,8 +3,17 @@ import { products } from '../../starting-code/data/products'
 import checkMark from '../assets/images/icons/checkmark.png'
 import homeFavicon from '../assets/images/home-favicon.png';
 import './HomePage.css'
+import { resolvePath } from 'react-router';
 
 export function HomePage() {
+
+  fetch('http://localhost:3000/api/products')
+    .then((response) => {
+      return response.json()
+    }).then((data) => {
+      console.log(data);
+    });
+
   return (
     <>
       <link rel="icon" type="image/svg+xml" href={homeFavicon} />
@@ -26,7 +35,7 @@ export function HomePage() {
 
                 <div className="product-rating-container">
                   <img className="product-rating-stars"
-                    src={`images/ratings/rating-${product.rating.stars * 10 }.png`} />
+                    src={`images/ratings/rating-${product.rating.stars * 10}.png`} />
                   <div className="product-rating-count link-primary">
                     {product.rating.count}
                   </div>
