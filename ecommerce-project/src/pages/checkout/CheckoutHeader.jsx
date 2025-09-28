@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import checkoutLockIcon from '../../assets/images/icons/checkout-lock-icon.png';
 import './CheckoutHeader.css';
-export function CheckoutHeader() {
+export function CheckoutHeader({cart}) {
   return (
     <>
       <div className="checkout-header">
@@ -15,7 +15,7 @@ export function CheckoutHeader() {
 
           <div className="checkout-header-middle-section">
             Checkout (<Link className="return-to-home-link"
-              to="/">3 items</Link>)
+              to="/">{cart.length} items</Link>)
           </div>
 
           <div className="checkout-header-right-section">
