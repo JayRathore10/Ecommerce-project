@@ -7,7 +7,7 @@ import './HomePage.css'
 
 
 export function HomePage({ cart  , loadCart}) {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
     const getHomeData = async()=>{
