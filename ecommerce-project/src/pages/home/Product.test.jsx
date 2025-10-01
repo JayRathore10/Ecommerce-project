@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import axios from 'axios';
 import { Product } from './Product';
-import { UNSAFE_LocationContext } from 'react-router';
+
 
 vi.mock('axios');
 
