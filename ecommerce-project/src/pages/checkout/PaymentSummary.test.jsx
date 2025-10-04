@@ -2,7 +2,7 @@ import { it, describe, vi, beforeEach, expect } from 'vitest';
 import axios from 'axios';
 import userEvent from '@testing-library/user-event';
 import { render, screen, within } from '@testing-library/react';
-import { MemoryRouter, useLoaderData, useLocation } from 'react-router-dom';
+import { MemoryRouter,  useLocation } from 'react-router-dom';
 import { PaymentSummary } from './PaymentSummary';
 
 vi.mock('axios');
